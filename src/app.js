@@ -29,7 +29,7 @@ app.get('', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About me',
-        name: 'Jules'
+        name: 'some code.'
     })
 })
 
@@ -72,7 +72,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help page',
         message: 'I hope this helped you',
-        name: 'Jules'
+        name: 'some code.'
     })
 })
 
@@ -80,7 +80,7 @@ app.get('/help/*', (req, res) => {
     res.render('404', {
         title: 'Error',
         error: 'Help article not found',
-        name: 'Jules'
+        name: 'some code.'
 
     })
 })
@@ -89,7 +89,7 @@ app.get('*', (req, res) => {
     res.render('404', {
         title: 'Error',
         error: 'Page not found',
-        name: 'Jules'
+        name: 'some code.'
     })
 })
 
