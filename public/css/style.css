@@ -1,13 +1,19 @@
 body {
-    color: #333;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
     max-width: 650px;
     margin: 0 auto;
     padding: 0 16px;
-    
+    background-image: url('/img/sunset-bg.svg');
+    /* background-image: url('/img/3706.svg'); */
+    /* background-image: url('/img/3452440.svg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    /* background-color: #333 */
 } 
 
 .main-content {
@@ -15,7 +21,8 @@ body {
 }
 
 footer {
-    color: #888;
+    /* color: #888; */
+    color: white;
     border-top: 1px solid #eee;
     margin-top: 16px;
     padding: 16px 0;
@@ -33,7 +40,7 @@ h1 {
 
 header a {
     text-decoration: none;
-    color: #888;
+    color: #FFF;
     margin-right: 16px;
 }
 
@@ -52,4 +59,21 @@ button {
     background: #888;
     color: white;
     padding: 8px;
+}
+
+#temperature-msg {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+}
+
+#global-informations {
+    display: flex;
+    flex-direction: column;
+}
+
+#city-msg {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
 }

@@ -6,7 +6,7 @@ const forecast = (latitude, longitude, callback) => {
 
     // Call the api url with json output, classic (error, response) request
     request({ url, json: true }, (error, { body }) => {
-        const { temperature, feelslike, weather_descriptions } = body.current;
+        const { temperature, feelslike, weather_descriptions, observation_time } = body.current;
         const { dataError } = body;
         // If low error i.e connexion lost returns it
         if(error) {
@@ -19,7 +19,8 @@ const forecast = (latitude, longitude, callback) => {
             callback(undefined, {
                 temperature,
                 feelslike,
-                weather_descriptions
+                weather_descriptions,
+                observation_time
             })
         }
     })

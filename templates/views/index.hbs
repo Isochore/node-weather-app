@@ -10,13 +10,21 @@
 <body>
     <div class="main-content">
         {{>header}}
-        <form>
-            <input placeholder="Location" type="text">
-            <button>Search</button>
-        </form>
-
-        <p id="error-msg"></p>
-        <p id="result-msg"></p>
+        <div>
+            <form>
+                <input placeholder="Location" type="text">
+                <button>Search</button>
+            </form>
+            <p id="error-msg">Error</p>
+        </div>
+        <div>
+            <div id="global-informations">
+                <p id="temperature-msg">25°C</p>
+                <p id="city-msg">City</p>
+            </div>
+            <p id="forecast-msg">Forecast</p>
+        </div>
+        <img id="flag-img">
     </div>
     {{>footer}}
     <script src="/js/app.js"></script>

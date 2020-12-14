@@ -6,7 +6,8 @@ const geocode = (address, callback) => {
 
     // Call the api url with json output, classic (error, response) request
     request({ url, json: true }, (error,{ body }) => {
-        const { center, place_name: location } = body.features[0] || {};
+        const { center, place_name: location, text: city } = body.features[0] || {};
+        const { short_code } = body.features[0].context[body.features[0].context.length - 1] || {};
         // If low error i.e connexion lost returns it
         if (error) {
             callback('Unable to connect to geocode services', undefined)
@@ -18,7 +19,9 @@ const geocode = (address, callback) => {
             callback(undefined, {
                 latitude: center[1],
                 longitude: center[0],
-                location
+                location,
+                city,
+                short_code
             })
         }
     })
