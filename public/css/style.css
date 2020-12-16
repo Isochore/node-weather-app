@@ -1,46 +1,60 @@
 body {
-    color: white;
+    color: #333;
     font-family: Arial, Helvetica, sans-serif;
-    max-width: 650px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 0 16px;
-    background-image: url('/img/sunset-bg.svg');
-    /* background-image: url('/img/3706.svg'); */
-    /* background-image: url('/img/3452440.svg'); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: center;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* background-color: #333 */
 } 
 
+#index-container {
+    background-image: url('/img/lake.jpg');
+}
+
 .main-content {
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
 }
 
-footer {
-    /* color: #888; */
+#index-container footer {
     color: white;
     border-top: 1px solid #eee;
     margin-top: 16px;
     padding: 16px 0;
 }
 
+#index-container footer a {
+    color: white;
+}
+
 header {
-    margin-top: 16px;
-    margin-bottom: 48px;
+    margin-bottom: 20vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 h1 {
-    font-size: 64px;
+    font-size: 48px;
     margin-bottom: 16px;
 }
 
 header a {
     text-decoration: none;
-    color: #FFF;
+    color: #333;
     margin-right: 16px;
 }
 
@@ -49,22 +63,22 @@ header a {
 }
 
 input {
-    border:1px solid #ccc;
+    border:1px solid #333;
     padding: 8px;
 }
 
 button {
     cursor: pointer;
-    border:1px solid #888;
-    background: #888;
+    border:1px solid #333;
+    background: #333;
     color: white;
     padding: 8px;
 }
 
 #temperature-msg {
-    font-size: 48px;
+    font-size: 36px;
     font-weight: bold;
-    margin: 0;
+    margin: 10px 0;
 }
 
 #global-informations {
@@ -72,8 +86,68 @@ button {
     flex-direction: column;
 }
 
+#global-informations-container {
+    flex-grow: 1;
+}
+
 #city-msg {
-    font-size: 24px;
     font-weight: bold;
     margin: 0;
+}
+
+#flag-img {
+    align-self: flex-start;
+}
+
+#forecast-msg {
+    margin: 0;
+    font-weight: bold;
+}
+
+#about-content {
+    display: flex;
+    align-items: center;
+}
+
+#error-msg {
+    color: white;
+}
+
+/* @media (min-width: 1200px) {
+
+} */
+
+@media (max-width: 575px) { 
+    #about-content {
+        flex-direction: column;
+    }
+
+    #about-container header {
+        margin-bottom: 5vh;
+    }
+}
+
+@media (min-width: 576px) { 
+}
+
+@media (min-width: 768px) { 
+
+}
+
+@media (min-width: 992px) { 
+    #city-msg {
+        font-size: 24px;
+    }
+
+    #temperature-msg {
+        font-size: 48px;
+    }
+    
+    #forecast-msg {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1200px) { 
+
 }
